@@ -60,3 +60,10 @@ def difference_of_squares(x)
   square_of_sum = square_of_sum**2
   square_of_sum - sum_of_squares
 end
+
+# solution 4
+
+def difference_of_squares(x)
+  r = 1..x
+  r.inject(:+) ** 2 - r.map{|x| x ** 2 }.inject(:+)
+end
