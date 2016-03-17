@@ -11,14 +11,25 @@ The parameter of accum is a string which includes only letters from a..z and A..
 
 =end
 
+#solution 1
+
 def accum(s)
-	
-	char = s.chars
-	
-	char.each {|k, v| puts "Key: #{k}, and heres value: "}
+
+	n = s.chars.unshift("0").map.with_index { |v, i| (v * i).capitalize }
+	m = n.join("-") #convert array into string with dashes
+      m[0] = "" #remove first element of the string
+      return m
 
 end
 
-s = "abc"
+s = "Abc"
 
-accum(s)
+puts accum(s)
+
+# solution 2
+
+def accum(s)
+  s.chars.each_with_index.map{ |c, i| c.upcase + c.downcase * i }.join('-')
+end
+
+
