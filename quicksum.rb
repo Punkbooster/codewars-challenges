@@ -28,4 +28,4 @@ def increment_string(input)
 	end
 end
 
-increment_string("foo10")
+increment_string("foo19")

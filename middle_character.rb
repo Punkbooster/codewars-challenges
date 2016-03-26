@@ -33,7 +33,7 @@ def get_middle(s)
 
 end
 
-puts get_middle("words")
+puts get_middle("wodrds").class
 
 #solution 2
 
